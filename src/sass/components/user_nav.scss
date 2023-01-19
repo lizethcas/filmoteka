@@ -1,0 +1,42 @@
+:host{
+    display: block;
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        color: white;
+        
+        & slot[name="title"] {
+                color: white;
+                }
+
+        & .btn_container {
+                    width: 100%;
+                    height: 150px;
+                    background-color: purple;
+                    display: flex;
+                    justify-content: center;
+                    align-content: center;
+                    align-items: center;
+                    gap: 50px;
+
+                    & .btn{
+                            --btn-color: #15e2e2;
+                            --btn-width: 180px;
+
+                    }
+                }
+
+        }
+
+
+
+    }
+

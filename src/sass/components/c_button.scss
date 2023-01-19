@@ -1,0 +1,17 @@
+:host {
+    display: block;
+    
+    button {
+            background-color: var(--btn-color, #ff0000);
+            min-width: var(--btn-width, 50px);
+            height: var(--btn-height, 50px);
+            border-radius: 5px;
+            color: white;
+            border: solid 1px white;
+
+            &:hover{
+                background-color: orange;
+                cursor: pointer;
+            }
+        }
+}
