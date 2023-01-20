@@ -8,3 +8,9 @@ sans-serif;
 $bold: 400;
 $bolder:500;
 
+body{
+    background-color: $white_primary;
+    margin: 0 auto;
+    font-family: $roboto;
+    font-weight: $bold;
+}

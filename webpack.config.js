@@ -1,7 +1,6 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin"),
   MiniCssExtractPlugin = require("mini-css-extract-plugin"),
   CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
-
 module.exports = {
   entry: {
     index_js: "./src/scripts/index.js",
@@ -20,19 +19,17 @@ module.exports = {
         },
       },
       {
-        test: /\.css|\.s(c|a)ss$/,
+        test: /\.s[ac]ss$/i,
         use: [
-          {
-            loader: "lit-scss-loader",
-            options: {
-              minify: true, // defaults to false
-            },
-          },
-          "extract-loader",
+          // Creates `style` nodes from JS strings
+          "style-loader",
+          // Translates CSS into CommonJS
           "css-loader",
+          // Compiles Sass to CSS
           "sass-loader",
         ],
       },
+
       {
         test: /\.(jpe?g|png|svg|webp)$/,
         loader: "file-loader",
@@ -65,5 +62,6 @@ module.exports = {
       filename: "./user.html",
       chunks: ["user_js"],
     }),
+    new MiniCssExtractPlugin(),
   ],
 };
