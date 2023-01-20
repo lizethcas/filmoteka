@@ -12,24 +12,45 @@ class C_Nav extends LitElement {
     return [
       css`
         :host {
-          min-width: 320px;
-          min-height: 230px;
-          margin: 0 auto;
-          color: white;
+          display: block;
         }
         .nav-container {
-          width: 100%;
-          height: 100%;
+          width: 320px;
+          min-height: 230px;
           display: flex;
           flex-direction: column;
+          background-size: cover;
         }
         .nav-menu {
+          width: 100%;
           display: flex;
-          justify-content: space-between;
+          justify-content: flex-start;
           align-content: center;
+          gap: 39px;
         }
         .nav-menu li {
           list-style: none;
+          cursor: pointer;
+        }
+        .nav-menu li img {
+          margin-right: 21px;
+        }
+        .nav-menu li a {
+          font-size: 12px;
+        }
+        .nav-menu li a::before {
+          content: "";
+          width: 100%;
+          display: block;
+          background-color: #ff6b08;
+        }
+
+        .nav-btn-container {
+          width: 100%;
+          margin-top: 49px;
+          display: flex;
+          justify-content: center;
+          gap: 19.62px;
         }
       `,
     ];
