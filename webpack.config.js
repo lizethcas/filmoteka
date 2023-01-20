@@ -33,6 +33,13 @@ module.exports = {
         ],
       },
       {
+        test: /\.(jpe?g|png|svg|webp)$/,
+        loader: "file-loader",
+        options: {
+          name: "[path][name].[ext]",
+        },
+      },
+      {
         test: /\.html$/i,
         use: [
           {
