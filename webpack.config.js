@@ -19,12 +19,19 @@ module.exports = {
         },
       },
       {
+        test: /\.(jpe?g|png|svg|webp)$/i,
+        loader: "file-loader",
+        options: {
+          name: "assets/[name].[ext]",
+        },
+      },
+      {
         test: /\.css|\.s(c|a)ss$/,
         use: [
           {
             loader: "lit-scss-loader",
             options: {
-              minify: true, // defaults to false
+              minify: true,
             },
           },
           "extract-loader",
@@ -32,13 +39,7 @@ module.exports = {
           "sass-loader",
         ],
       },
-      {
-        test: /\.(jpe?g|png|svg|webp)$/,
-        loader: "file-loader",
-        options: {
-          name: "[path][name].[ext]",
-        },
-      },
+
       {
         test: /\.html$/i,
         use: [

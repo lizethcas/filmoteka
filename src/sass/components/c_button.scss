@@ -2,6 +2,7 @@
     display: block;
     
     button {
+        //SE AGREGAN VARIABLES A LOS VALORES QUE MODIFICAREMOS EN OTROS COMPONENTES NOMBRES SIGNIFICATIVOS
             background-color: var(--btn-color, #ff0000);
             min-width: var(--btn-width, 50px);
             height: var(--btn-height, 50px);

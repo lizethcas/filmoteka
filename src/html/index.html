@@ -5,13 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FILMOTEKA</title>
+    <!-- IMPORTANTE
+    NO ES NECESARIO INDEXAR NINGUN STILO NI NADA WEBPACK YA LO HACE POR NOSOTROS
+    -->
 </head>
 <body>
 
     <header></header>
     <main>
         <div class="container">
+
+            <!-- ESTE ES NUESTRO COMPONENTE PERSONALIZADO -->
             <c-nav>
+                <!-- ESTO ES UN SLOT POR NOMBRE 
+                PRACTICAMENTE UN SLOT CON NOMBRE ES ALGO QUE AGREGAMOS DENTRO DE NUESTRO COMPONENTE
+                PERSONALIZADO
+                -->
                 <h1 slot="title">LIT EXAMPLE</h1>
             </c-nav>
         </div>
